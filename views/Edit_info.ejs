@@ -1,0 +1,33 @@
+<%- include("header") %>
+<div class="row">
+    <div class="col-12">
+        <h2>Reg</h2>
+        <% if (typeof error !== 'undefined') { %>
+            <div class="alert-danger alert"><%= error %></div>
+        <% } %>
+        <form method="POST">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" value="<%= typeof email === 'undefined' ? '' : email %>">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" value="<%= typeof name === 'undefined' ? '' : name %>">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Phone number</label>
+                <input type="text" class="form-control" id="phone" name="Tel" value="<%= typeof tel === 'undefined' ? '' : tel %>">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Facebook/twitter tag</label>
+                <input type="text" class="form-control" id="Fb_twittername" name="Fb_twittername" value="<%= typeof tag === 'undefined' ? '' : tag %>">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Update</button>
+                <a href="/profile/<%= sessionID %>" class="btn btn-link">Back</a>
+            <a href="/profile/<%= sessionID %>/delete" class="btn btn-sm btn-danger"><i
+                        class="far fa-trash-alt"></i>Delete</a>
+        </form>
+    </div>
+</div>
+<%- include("footer") %>

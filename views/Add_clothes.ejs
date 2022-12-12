@@ -1,0 +1,42 @@
+<%- include("header") %>
+<div class="row">
+    <div class="col-12">
+        <h2>Reg</h2>
+        <% if (typeof error !== 'undefined') { %>
+            <div class="alert-danger alert"><%= error %></div>
+        <% } %>
+        <form method="POST">
+            <div class="mb-3">
+                <label for="type" class="form-label">Type</label>
+                <input type="text" class="form-control" id="type" name="type_add" value="<%= typeof currswap === 'undefined' ? '' : currswap.Type_own %>">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Size</label>
+                <input type="text" class="form-control" id="size" name="size_add" value="<%= typeof currswap === 'undefined' ? '' : currswap.Size_own %>">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Gender</label>
+                <input type="text" class="form-control" id="phone" name="gender_add" value="<%= typeof currswap === 'undefined' ? '' : currswap.Gender_own %>">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Approximate value</label>
+                <input type="text" class="form-control" id="value" name="value_add" value="<%= typeof currswap === 'undefined' ? '' : currswap.Value_own %>">
+            </div>
+            <div class="mb-3">
+                <label for="type" class="form-label">Type (swapping to)</label>
+                <input type="text" class="form-control" id="type" name="type_swapto_add" value="<%= typeof currswap === 'undefined' ? '' : currswap.Type_swapto %>">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Size (swapping to)</label>
+                <input type="text" class="form-control" id="size" name="size_swapto_add" value="<%= typeof currswap === 'undefined' ? '' : currswap.Size_swapto %>">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Gender (swapping to)</label>
+                <input type="text" class="form-control" id="phone" name="gender_swapto_add" value="<%= typeof currswap === 'undefined' ? '' : currswap.Gender_swapto %>">
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+            <a href="/profile/<%= sessionID %>" class="btn btn-link">Back</a>
+        </form>
+    </div>
+</div>
+<%- include("footer") %>

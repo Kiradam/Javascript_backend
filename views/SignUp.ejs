@@ -1,0 +1,34 @@
+<%- include("header") %>
+<div class="row">
+    <div class="col-12">
+        <h2>Reg</h2>
+        <% if (typeof error !== 'undefined') { %>
+            <div class="alert-danger alert"><%= error %></div>
+        <% } %>
+        <form method="POST">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Phone number</label>
+                <input type="text" class="form-control" id="phone" name="Tel">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Facebook/twitter tag</label>
+                <input type="text" class="form-control" id="Fb_twittername" name="Fb_twittername">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Registration</button>
+            <a href="/" class="btn btn-link">I would rather login</a>
+        </form>
+    </div>
+</div>
+<%- include("footer") %>

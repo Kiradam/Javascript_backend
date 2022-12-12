@@ -1,0 +1,13 @@
+<%- include("header") %>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            Unfortunately we couldn't find any direct swaps. Do you want to try TriSwap?
+            <br/>
+            <a href="/profile/<%= sessionID %>/clothes/<%= swap._id %>/triswap" class="btn btn-sm btn-success">Yes</a>
+            <a href="/profile/<%= sessionID %>/clothes/<%= swap._id %>/triswap/unsuc" class="btn btn-sm btn-danger">No</a>
+        </div>
+    </div>
+</div>
+
+<%- include("footer") %>

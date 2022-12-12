@@ -1,0 +1,34 @@
+<%- include("header") %>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>Informations about swap partners:</h2>
+      <table class="table table-striped table-bordered">
+        <tr>
+          <th>Name#1:</th>
+          <th>Tag#1:</th>
+          <th>Tel#1:</th>
+          <th>Email#1:</th>
+          <th>Name#2:</th>
+          <th>Tag#2:</th>
+          <th>Tel#2:</th>
+          <th>Email#2:</th>
+        </tr>
+        <tr>
+          <td><%= name1 %></td>
+          <td><%= tag1 %></td>
+          <td><%= tel1 %></td>
+          <td><%= email1 %></td>
+          <td><%= name2 %></td>
+          <td><%= tag2 %></td>
+          <td><%= tel2 %></td>
+          <td><%= email2 %></td>
+        </tr>
+      </table>
+      <br/>
+      <a href="/profile/<%= sessionID %>/" class="btn btn-block btn-primary">Back</a>
+    </div>
+  </div>
+</div>
+
+<%- include("footer") %>

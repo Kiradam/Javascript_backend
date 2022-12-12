@@ -1,0 +1,25 @@
+<%- include("header") %>
+<div class="row">
+    <div class="col-12">
+        <h2>Login</h2>
+        <% if (typeof error !== 'undefined') { %>
+            <div class="alert-danger alert"><%= error %></div>
+        <% } %>
+        <form method="POST">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="Email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+
+            <a href="/register" class="btn ">Register</a>
+            <a href="/forgottenpass" class="btn ">Forgotten password</a>
+            <a href="https://www.youtube.com/watch?v=Uo3cL4nrGOk" class="btn btn-primary">Surprise</a>
+        </form>
+    </div>
+</div>
+<%- include("footer") %>
